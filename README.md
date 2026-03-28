@@ -1,4 +1,4 @@
-# Racial Disparities in Breast Cancerr Survival
+# Racial Disparities in Breast Cancer Survival
 ### An Independent Research Project Using NIH TCGA and SEER Data
 
 ## Overview
