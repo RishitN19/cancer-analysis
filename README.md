@@ -10,9 +10,11 @@
 ## Methods
 
 ## Notebooks
-  01_tcga_exploratn - TCGA data cleaning and survival analysis by race
-  02_seer_exploration - SEER data analysis and stage-controlled survival curves
-  03_ml_model - Random Forest model for a 5-year survival prediction
+| Notebook | Description |
+|----------|-------------|
+| 01_tcga_exploration | TCGA data cleaning and survival analysis by race |
+| 02_seer_exploration | SEER data analysis and stage-controlled survival curves |
+| 03_ml_model | Random Forest model for 5-year survival prediction |
 
 ## Key Visualizations
 
