@@ -3,23 +3,24 @@
 
 ---
 
-## Background & Motivation
+## Background
 
-Breast cancer is the most commonly diagnosed cancer among women in the United States, 
-accounting for roughly 1 in 3 new female cancer diagnoses annually. While overall survival 
-rates have improved over the past three decades due to advances in screening and treatment, 
-these improvements have not been equally distributed across racial groups.
+Breast cancer is the most commonly diagnosed cancer among women in the United States,
+making up about 1 in 3 new female cancer diagnoses each year. Survival rates have improved
+significantly over the past few decades, but those gains have not reached every group equally.
 
-Black women in the United States are approximately 40% more likely to die from breast cancer 
-than White women, despite having a lower overall incidence rate. This paradox — lower rates 
-but worse outcomes — has been documented in the clinical literature, but the underlying 
-mechanisms remain debated. Proposed explanations include differences in stage at diagnosis, 
-access to timely treatment, tumor biology (e.g., higher rates of triple-negative breast cancer 
-in Black patients), and socioeconomic barriers to care.
+Black women are roughly 40% more likely to die from breast cancer than White women, even
+though they are diagnosed with it less often. That gap has been documented for years, but
+the reasons behind it are still not fully understood. Some studies point to later stage at
+diagnosis, others to higher rates of triple-negative breast cancer, which is more aggressive
+and harder to treat. Others point to gaps in insurance coverage, proximity to specialized
+care, or delays between diagnosis and treatment. Most likely it is some combination of all
+of these.
 
-This project uses two independent, large-scale NIH datasets to quantify the racial survival 
-disparity in breast cancer and test whether it persists after controlling for cancer stage — 
-a key variable that could otherwise explain observed differences.
+This project tries to get at one specific piece of that question: is the survival gap
+explained by the fact that Black patients tend to be diagnosed at later stages, or does
+the disparity exist even within the same stage? Using two large NIH datasets, I ran
+survival analyses within each stage group separately to test this.
 
 ---
 
@@ -114,17 +115,22 @@ stratifying by stage, Black patients still had significantly worse survival:
 
 ## Implications
 
-The persistence of racial survival disparities across cancer stages — and race's independent 
-contribution in the ML model — suggests the disparity cannot be fully attributed to later 
-diagnosis alone. Other factors likely contributing include:
-- Differential access to timely, high-quality treatment
-- Higher prevalence of aggressive tumor subtypes (e.g., triple-negative breast cancer) 
-  in Black patients
-- Socioeconomic barriers not captured in these datasets
-- Potential implicit bias in clinical decision-making
+The survival gap held up across almost every stage group in both datasets, which makes
+it difficult to attribute entirely to later diagnosis. If the disparity were purely a
+screening problem, you would expect it to shrink or disappear once patients are matched
+by stage. That did not happen here.
 
-These findings support the need for targeted interventions at the treatment and systems 
-level, not just earlier screening.
+What that points to is something happening at or after the treatment level. The datasets
+do not include enough variables to pinpoint the cause, but the likely candidates are
+differences in treatment quality and access, higher rates of aggressive tumor subtypes
+among Black patients, and socioeconomic factors that affect follow-through on care. The
+ML model adds to this picture by showing that race contributes independently to survival
+predictions even after stage and age are already accounted for.
+
+More granular data, including treatment regimens, insurance status, and tumor subtype,
+would be needed to separate these factors out properly. But the pattern across two
+independent datasets with over 200,000 patients is consistent enough that it warrants
+that kind of deeper investigation.
 
 ---
 
