@@ -140,7 +140,7 @@ that kind of deeper investigation.
   hormone therapy, surgery type), which are important confounders
 - Socioeconomic variables (income, insurance status, distance to care) are not available 
   at the patient level in either dataset
-- TCGA is not a population-representative sample — it skews toward academic medical centers
+- TCGA is not a population-representative sample, it skews toward academic medical centers
 - Race is self-reported and categorized broadly, which may mask within-group heterogeneity
 - The ML model uses only 4 features; a more complete model would include tumor subtype, 
   comorbidities, and treatment variables
