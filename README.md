@@ -214,6 +214,8 @@ interaction suggests the gap may widen with age, which warrants further investig
 ---
 
 ## Repository Structure
+
+```
 cancer-analysis/
 ├── notebooks/
 │   ├── 01_tcga_exploration.ipynb
@@ -233,7 +235,7 @@ cancer-analysis/
 │   ├── tcga_external_validation_roc.png
 │   └── tcga_external_validation_calibration.png
 └── README.md
----
+```
 
 ## How to Reproduce
 
